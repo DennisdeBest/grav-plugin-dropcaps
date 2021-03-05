@@ -105,10 +105,12 @@ class DropCapsPlugin extends Plugin
       // Get content
       $content = $page->getRawContent();
 
-      // Insert DropCap and save modified page content
-      $page->setRawContent(
-        $this->init()->process($content, $config)
-      );
+      if($content){
+          // Insert DropCap and save modified page content
+          $page->setRawContent(
+              $this->init()->process($content, $config)
+          );
+      }
     }
   }
 

@@ -10,6 +10,7 @@
 
 namespace Grav\Plugin;
 
+use DOMDocument;
 use Grav\Common\GravTrait;
 
 /**
