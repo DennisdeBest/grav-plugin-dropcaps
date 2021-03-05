@@ -118,9 +118,8 @@ class DropCaps
    */
   protected function insertDropCap($content)
   {
-    // Extract first few letters from paragraph and normalize them
+    // Extract first few letters from paragraph
     $chunk = mb_substr($content, 0, min(8, mb_strlen($content)), 'UTF-8');
-    $chunk = iconv('UTF-8', 'ASCII//TRANSLIT', $chunk);
 
     // We're looking for the first paragraph tag followed by a
     // capital letter
